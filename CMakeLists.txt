@@ -202,7 +202,8 @@ if(M_LIB)
     target_link_libraries(h3 PUBLIC ${M_LIB})
 endif()
 
-if(BUILD_SHARED_LIBS)
+#if(BUILD_SHARED_LIBS)
+if(1)
     set_target_properties(h3 PROPERTIES SOVERSION ${H3_SOVERSION})
 endif()
 
