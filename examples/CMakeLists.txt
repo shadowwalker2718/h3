@@ -33,13 +33,13 @@ link_libraries(h3::h3)
 
 # Build each example
 foreach(name ${EXAMPLES})
-    add_executable(${name} "${name}.c")
+    add_executable(${name} "examples/${name}.c")
 endforeach()
 
 # Testing the examples
 include(CTest)
 if(BUILD_TESTING)
-    include(../cmake/TestWrapValgrind.cmake)
+    include(./cmake/TestWrapValgrind.cmake)
 
     enable_testing()
 

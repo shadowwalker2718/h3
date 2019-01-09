@@ -221,7 +221,7 @@ target_include_directories(h3 PUBLIC
 find_program(CLANG_FORMAT_PATH clang-format)
 cmake_dependent_option(
     ENABLE_FORMAT "Enable running clang-format before compiling" ON
-    "CLANG_FORMAT_PATH" OFF)
+    "CLANG_FORMAT_PATH" ON)
 if(ENABLE_FORMAT)
     # Format
     add_custom_target(format
@@ -586,3 +586,5 @@ install(
     NAMESPACE "${namespace}"
     DESTINATION "${config_install_dir}"
 )
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/examples/CMakeLists.txt)
